@@ -1,12 +1,26 @@
-const index = require('./index');
 const Carrinho = require('./Carrinho');
 test('should be an object list', () => {
     let list =  [ {
-        nome: 'teste',
-        codigo: '100'
+        name: 'teste',
+        code: '100'
 
     }];
-    expect(Carrinho.create()).toEqual(list);
-
+    expect(Carrinho.getCarrinho()).toEqual(list);
     
 });
+
+test('should return a new product', () => {
+    let product = {
+        name: 'teste',
+        code: 100
+    }
+
+    expect(Carrinho.addNewProduct('teste', 100)).toEqual(product);
+    
+});
+
+// test('should delete a product from the cart', () => {
+
+//     expect(Carrinho.deleteProduct(code)).toReturn
+    
+// });
