@@ -1,12 +1,25 @@
 
-    function create(){
         let carrinho = [ {
-            nome: 'teste',
-            codigo: '100'
+            name: 'teste',
+            code: '100'
 
         }];
-           
+    function getCarrinho(){
+
         return carrinho;
     }
 
-module.exports.create = create;
+    function addNewProduct(name, code){
+        let product = {
+            name,
+            code
+        }
+
+        carrinho.push(product);
+        return product;
+        
+
+    }
+
+module.exports.getCarrinho = getCarrinho;
+module.exports.addNewProduct = addNewProduct;
