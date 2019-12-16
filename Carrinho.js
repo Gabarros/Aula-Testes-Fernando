@@ -10,15 +10,13 @@
     }
 
     function addNewProduct(name, code){
+
         let product = {
-            name,
-            code
-        }
+            name: name,
+            code: code
 
         carrinho.push(product);
         return product;
-        
-
     }
 
 module.exports.getCarrinho = getCarrinho;
