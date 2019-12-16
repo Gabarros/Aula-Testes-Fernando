@@ -14,11 +14,9 @@
         let product = {
             name: name,
             code: code
-        }
 
         carrinho.push(product);
         return product;
-    
     }
 
 module.exports.getCarrinho = getCarrinho;
